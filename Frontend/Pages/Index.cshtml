@@ -1,0 +1,69 @@
+﻿@page
+@model IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Home page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Network</title>
+    <script type="text/javascript"
+            src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style type="text/css">
+        #mynetwork {
+            width: 1200px;
+            height: 800px;
+            border: 1px solid lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div id="mynetwork"></div>
+    <script type="text/javascript">
+        // create an array with nodes
+        var nodeDtos = @Json.Serialize(Model.Dtos);
+        var dataSet = [];
+        for (var i of nodeDtos) {
+            dataSet.push({ id: i.id, label: "Nodo" + i.id + "\nV: " + i.value + "\n10%: " + i.teenPercent + "\n 10%Ch:" + i.accumulatedPercentageOfChildren + "\nT: " + (i.value + i.accumulatedPercentageOfChildren) });
+        }
+        
+        var nodes = new vis.DataSet(dataSet);
+
+        // create an array with edges
+        var edges = new vis.DataSet([
+            { from: 1, to: 2 },
+            { from: 1, to: 3 },
+            { from: 2, to: 4 },
+            { from: 2, to: 5 },
+            { from: 3, to: 6 },
+            { from: 4, to: 7 },
+            { from: 4, to: 8 },
+            { from: 5, to: 9 },
+            { from: 5, to: 10 },
+            { from: 6, to: 11 },
+            { from: 6, to: 12 },
+        ]);
+
+        // create a network
+        var container = document.getElementById("mynetwork");
+        var data = {
+            nodes: nodes,
+            edges: edges,
+        };
+        var options = {
+            layout: {
+                hierarchical: {
+                    direction: "UD",
+                    sortMethod: "directed"
+                },
+                edges: {
+                    arrows:"to",
+                }
+            }
+           
+        };
+        var network = new vis.Network(container, data, options);
+    </script>
+</body>
+</html>

@@ -10,6 +10,7 @@ namespace PersistenceLayer.Configurations
             entityBuilder.HasOne(nv => nv.Node)
                         .WithMany(n => n.Values)
                         .HasForeignKey(nv =>nv.NodeId);
+            
                 
         }
     }

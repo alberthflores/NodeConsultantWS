@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DomainLayer.BaseModels;
+﻿using DomainLayer.BaseModels;
 
 namespace DomainLayer
 {
@@ -11,6 +6,7 @@ namespace DomainLayer
     {
         public int NodeId { get; set; }
         public Node Node { get; set; }
+        public int Value { get; set; }
 
     }
 }

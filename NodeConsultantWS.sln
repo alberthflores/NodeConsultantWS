@@ -42,6 +42,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DtoLayer", "src\DtoLayer\Dt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonLayer", "src\CommonLayer\CommonLayer.csproj", "{334EE147-0B68-48E3-B1F9-721D181B997B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend", "Frontend\Frontend.csproj", "{255C8EBA-467C-4A68-B4F5-042C470A7FC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,6 +74,10 @@ Global
 		{334EE147-0B68-48E3-B1F9-721D181B997B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{334EE147-0B68-48E3-B1F9-721D181B997B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{334EE147-0B68-48E3-B1F9-721D181B997B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{255C8EBA-467C-4A68-B4F5-042C470A7FC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{255C8EBA-467C-4A68-B4F5-042C470A7FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{255C8EBA-467C-4A68-B4F5-042C470A7FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{255C8EBA-467C-4A68-B4F5-042C470A7FC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
