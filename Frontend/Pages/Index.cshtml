@@ -37,6 +37,7 @@
             { from: 2, to: 4 },
             { from: 2, to: 5 },
             { from: 3, to: 6 },
+            { from: 3, to: 13 },
             { from: 4, to: 7 },
             { from: 4, to: 8 },
             { from: 5, to: 9 },
@@ -54,12 +55,20 @@
         var options = {
             layout: {
                 hierarchical: {
-                    direction: "UD",
-                    sortMethod: "directed"
+                    
+                    enabled: true,
+                    levelSeparation: 250,
+                    nodeSpacing: 150,
+                    treeSpacing: 250,
+                    blockShifting: false,
+                    edgeMinimization: false,
+                    parentCentralization: false,
+                    direction: 'UD',        // UD, DU, LR, RL
+                    sortMethod: 'directed',  // hubsize, directed
+                    shakeTowards: 'roots'  // roots, leaves
                 },
-                edges: {
-                    arrows:"to",
-                }
+
+
             }
            
         };
